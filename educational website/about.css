@@ -1,0 +1,578 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*the background of the header*/
+header{
+    background: linear-gradient(#EE81B3,#87805E);
+    overflow: hidden;
+}
+/*styling the top part*/
+nav{
+    background: transparent;
+    width: 100%;
+    position: fixed;
+    padding: 15px;
+}
+/*we add this class in order to make make the nav position :fixed*/
+.nav-container{
+    display: flex;
+    justify-content: space-around;
+}
+/*styling the logo*/
+.top-part h2{
+    font-size: 30px;
+}
+.top-part h2 a{
+    text-decoration: none;
+    transition: 0.5s;
+    color: #0b6338;
+}
+/*styling the navbar*/
+.top-part ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    /*to remove points of a list*/
+    list-style: none;
+}
+.top-part ul li a{
+    text-decoration: none;
+    transition: all  400ms ease-out;
+    color: white;
+}
+.top-part ul li a:hover{
+    text-decoration: underline;
+    color: black;
+}
+/*we hide the button of the menu for wide screen*/
+.close-btn{
+    display: none;
+}
+/*this is the class for the background of the navbar
+when we do scrolling*/
+.window-scroll{
+    background: #d63114;
+    box-shadow: 0 0.2rem 1rem rgb(0, 0, 0);
+    z-index: 11;
+}
+/*styling the content of part1*/
+
+.content{
+    padding-top: 130px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 45px;
+    padding-bottom: 30px;
+}
+/*styking the image*/
+.content .image{
+    width: 55%;
+}
+.content .image img{
+    width: 100%;
+    height: 100%;
+}
+
+/*styling the text content*/
+.content .text-content{
+    width: 45%;
+}
+.content .text-content h2{
+    font-size: 25px;
+    margin-bottom: 17px;
+    color: rgb(10, 13, 0);
+    text-transform: uppercase;
+}
+.content .text-content p{
+    color: #fff;
+    line-height: 14px;
+}
+.BOXES{
+    display: flex;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.BOX{
+    border: 1px solid purple;
+    width: 100%;
+    height: 60%;
+    padding: 35px;
+    text-align: center;
+    background: #76BA99;
+    border-radius: 15%;
+    transition: 0.7s;
+}
+.BOX:hover{
+    box-shadow: 0.2rem 0.2rem  1.5rem rgb(38, 0, 255);
+}
+/*styling the part of our team*/
+
+.our-team{
+    background: linear-gradient(#54BAB9,#541690);
+}
+/*styling the title of this part*/
+.our-team h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 45px;
+    padding-top: 15px;
+}
+/*styling the content of this part*/
+.our-team .teams{
+    padding-bottom: 50px;
+    margin-left: 27.7%;
+}
+.our-team .teams .team{
+    display: flex;
+    gap: 0.7rem;
+}
+/*styling every member*/
+.our-team .teams .team .member{
+    width: 13%;
+    text-align: center;
+    margin-bottom: 10px;
+    border: 2px solid purple;
+    padding: 5px;
+    background: #1A132F;
+    border-radius: 10%;
+    color: white;
+    transition: 0.7s;
+    display: flex;
+}
+/*styling when we hover on it*/
+.our-team .teams .team .member:hover{
+    background: none;
+}
+/*this is used to make filter on the image*/
+.our-team .teams .team .member img{
+    filter: saturate(0);
+}
+.our-team .teams .team .member:hover img{
+    filter: saturate(1);
+}
+/*styling the image of every person*/
+.our-team .teams .team .member img{
+    width: 100%;
+    border-radius: 15%;
+    margin-bottom: 0px;
+}
+
+/*styling the part of social which will be showed only when we hover the member*/
+.our-team .teams .team .member .social-media{
+    border: 1px solid black;
+    height: 60%;
+    padding: 5px;
+    background: #FFC4C4;
+    transform: translateY(12px);
+    margin-right: -5.5px;
+    border-top-left-radius: 21%;
+    border-bottom-left-radius: 18%;
+    width: 100%;
+    margin-left: 2px;
+    display: none;
+    /*this is used to make it scrolling
+    right: -100%;
+    position: absolute;
+    */
+    
+}
+/*this is used to scroll the side bar of social-media 
+.our-team .teams .team .member:hover .social-media{
+    right: 0;
+}
+*/
+
+/*styling the image of every social media*/
+.our-team .teams .team .member .social-media a img{
+    margin-bottom: 15px;
+    width: 50%;
+    transition: 0.5s;
+}
+.our-team .teams .team .member .social-media a img:hover{
+    background: white;
+    border: 2px solid #3F4E4F;
+    border-radius: 35%;
+    padding: 2px;
+    width: 70%;
+}
+/*styling the name and the job of the member*/
+.our-team .teams .team .member h3{
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600px;
+}
+.our-team .teams .team .member h5{
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/*i have to find a solution in order to make the transition slowloy and i have to make div which contain only image and social media and this 
+aim to resize only the image not also the name and the job of the person*/
+
+
+
+/*styling the footer*/
+.footers{
+    background: #1b2430ec;
+    color: white;
+}
+.footer{
+    display: flex;
+    padding: 45px 50px;
+}
+/*styling the first part */
+.description{
+    padding-right: 125px ;
+}
+/*styling the title of the first part */
+.footer .description h2{
+    font-size: 30px;
+    margin-bottom: 17px;
+    text-transform: uppercase;
+}
+.footer .description h2 a{
+    text-decoration: none;
+    color: #F05454;
+}
+
+/*styling the second part */
+.footer .permalinks{
+    padding-right: 125px;
+}
+/*styling the title of the second part */
+.footer .permalinks h3{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #39A388;
+}
+/*styling the content of this part*/
+.footer .permalinks ul li{
+    display: block;
+    margin: 15px;
+}
+.footer .permalinks ul li a{
+    text-decoration: none;
+    transition: 0.5s;
+    color: white;
+}
+.footer .permalinks ul li a:hover{
+    font-size: 15px;
+    text-decoration: underline;
+    color: #F05454;
+}
+
+/*styling the third part*/
+.footer .primacy{
+    padding-right: 80px;
+    width: 25%;
+    text-align: center;
+}
+/*styling the title of the third part */
+.footer .primacy h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #39A388;
+}
+
+/*styling the content of this part*/
+.footer .primacy ul li{
+    display: block;
+    margin: 15px;
+}
+.footer .primacy ul li a{
+    text-decoration: none;
+    transition: 0.5s;
+    color: white;
+}
+.footer .primacy ul li a:hover{
+    font-size: 15px;
+    text-decoration: underline;
+    color: #F05454;
+}
+
+/*styling the fourth part*/
+/*styling the title of this part*/
+.footer .Contact-us h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: #FF0075;
+}
+/*styling the content of this part*/
+.footer .Contact-us h5{
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+/*styling the logos of this part*/
+.footer .Contact-us .social-media{
+    margin-top: 10px;
+    text-align: center;
+}
+.footer .Contact-us .social-media a{
+    margin-right: 2px;
+}
+/*this is styling the part of copyright*/
+.footers hr{
+    background-color: black;
+    border: black 0.1px solid;
+}
+.footers h4{
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family:serif;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:930px){
+    .footer{
+        display: flex;
+        padding: 45px 30px;
+    }
+/*styling the first part */
+.description{
+    padding-right: 35px ;
+    width: 100%;
+}
+
+/*styling the second part */
+.footer .permalinks{
+    padding-right: 35px;
+}
+
+/*styling the third part*/
+.footer .primacy{
+    padding-right: 20px;
+}  
+
+
+}
+
+
+@media screen and (max-width:870px){
+    
+/*styling the content of this part*/
+.our-team .teams{
+    margin-left: 6%;
+}
+.our-team .teams .team{
+    display: flex;
+    gap: 0.7rem;
+}
+/*styling every member*/
+.our-team .teams .team .member{
+    width: 20%;
+}
+
+/*styking the image*/
+.content .image{
+    width: 40%;
+}
+.content .image img{
+    height: 90%;
+}
+
+/*styling the text content*/
+.content .text-content{
+    width: 60%;
+}
+
+.BOX{
+    padding: 25px;
+}
+
+
+}
+/*this is for the phone of surface Duo*/
+@media  screen and (max-width:640px){
+    .close-btn{
+        display: block;
+        margin-right: 38px;
+        cursor: pointer;
+    }
+    .close-btn .close{
+        display: none;
+    }
+    .nav-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .top-part ul{
+        position: fixed;
+        top: 2.5rem;
+        right: 8%;
+        height: fit-content;
+        width: 15rem;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+    .top-part ul li{
+        width: 100%;
+        height: 4.5rem;
+        /*this is for animations as it is showd*/
+        animation: animatNavItems 400ms  forwards;
+        transform-origin: top right;
+        opacity: 0;
+    }
+    .top-part ul li:nth-child(2){
+        animation-delay: 200ms;
+    }
+    .top-part ul li:nth-child(3){
+        animation-delay: 400ms;
+    }
+    .top-part ul li:nth-child(4){
+        animation-delay: 600ms;
+    }
+
+    @keyframes animatNavItems{
+        0%{
+            transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+        }
+        100%{
+            transform: rotateZ(0) rotateX(0) scale(1);
+            opacity: 1;
+        }
+    }
+    .top-part ul li a{
+        background: #3232d1;
+        box-shadow: -4rem 6rem 10rem rgba(0,0,0,0.6);
+        width: 100%;
+        height: 100%;
+        display: grid;  
+        place-items: center;      
+    }
+    .top-part ul li a:hover{
+        background: #1e5afa;
+    }
+    .content{
+        margin: 0 20px;
+    }
+    .content .image-content{
+        width: 57%;
+    }
+
+
+    
+.footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+}
+.footer .permalinks{
+    padding-right:10px;
+}
+/*styling the third part*/
+.footer .primacy{
+    width: 94%;
+}
+.footer .description{
+    text-align: center;
+}
+
+}
+
+@media screen and (max-width:570px){
+.content .image{
+    display: none;
+}
+
+/*styling the text content*/
+.content .text-content{
+    width: 100%;
+    text-align: center;
+}
+
+.BOX{
+    padding: 25px;
+}
+}
+@media  screen and (max-width:500px){
+    
+/*styling the content of this part*/
+.our-team .teams{
+    margin-left: 1%;
+    display: flex;
+    gap: 0.7rem;
+}
+.our-team .teams .team{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+/*styling every member*/
+.our-team .teams .team .member{
+    width: 88%;
+    padding: 10px;
+}
+
+/*styling the part of social which will be showed only when we hover the member*/
+.our-team .teams .team .member .social-media{
+    border: 1px solid black;
+    height: 88%;
+    padding: 5px;
+    background: #FFC4C4;
+    transform: translateY(2px);
+    margin-right: -10px;
+    border-top-left-radius: 21%;
+    border-bottom-left-radius: 18%;
+    width: 100%;
+    margin-left: 2px;
+    display: none;
+    /*this is used to make it scrolling
+    right: -100%;
+    position: absolute;
+    */
+    
+}
+/*this is used to scroll the side bar of social-media 
+.our-team .teams .team .member:hover .social-media{
+    right: 0;
+}
+*/
+
+/*styling the image of every social media*/
+.our-team .teams .team .member .social-media a img{
+    margin-bottom: 15px;
+    width: 50%;
+    transition: 0.5s;
+}
+.our-team .teams .team .member .social-media a img:hover{
+    background: white;
+    border: 2px solid #3F4E4F;
+    border-radius: 35%;
+    padding: 2px;
+    width: 70%;
+}
+/*styling the name and the job of the member*/
+.our-team .teams .team .member h3{
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600px;
+}
+.our-team .teams .team .member h5{
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+
+
+}

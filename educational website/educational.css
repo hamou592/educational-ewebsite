@@ -1,0 +1,791 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*the background of the header*/
+header{
+    background: linear-gradient(rgba(7, 156, 19, 0.632),rgba(22, 19, 224, 0.737));
+    overflow: hidden;
+}
+/*styling the top part*/
+nav{
+    background: transparent;
+    width: 100%;
+    position: fixed;
+    padding: 15px;
+}
+/*we add this class in order to make make the nav position :fixed*/
+.nav-container{
+    display: flex;
+    justify-content: space-around;
+}
+/*styling the logo*/
+.top-part h2{
+    font-size: 30px;
+}
+.top-part h2 a{
+    text-decoration: none;
+    transition: 0.5s;
+    color: rgba(206, 13, 174, 0.881);
+}
+/*styling the navbar*/
+.top-part ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    /*to remove points of a list*/
+    list-style: none;
+}
+.top-part ul li a{
+    text-decoration: none;
+    transition: all  400ms ease-out;
+    color: white;
+}
+.top-part ul li a:hover{
+    text-decoration: underline;
+    color: black;
+}
+/*this is the class for the background of the navbar
+when we do scrolling*/
+.window-scroll{
+    background: #3232d1;
+    box-shadow: 0 0.2rem 1rem rgb(0, 0, 0);
+    z-index: +100;
+}
+
+/*styling the content of the top part*/
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 45px;
+}
+header .content{
+    padding-top: 130px;
+}
+/*styling the text of the content*/
+.content .text-content{
+    width: 40%;
+}
+.content .text-content h3 {
+    font-size: 30px;
+    margin-bottom: 17px;
+    color: rgb(10, 13, 0);
+    text-transform: uppercase;
+}
+.content .text-content p{
+    color: #fff;
+    line-height: 20px;
+}
+.content button{
+    margin-top: 17px;
+    background-color: rgba(0, 21, 255, 0.795);
+    border: 1px solid rgba(0, 21, 255, 0.795);
+    font-size: 15px;
+    padding: 14px  20px;
+}
+.content button a{
+    text-decoration: none;
+    color: rgba(228, 42, 222, 0.886);
+}
+.content button:hover{
+    background-color: rgb(4, 13, 113);
+    border: 1px solid rgb(4, 13, 113);
+}
+/*styling the image of the content*/
+.content .image-content{
+    width: 40%;
+}
+.content .image-content img{
+    width: 100%;
+}
+/*we hide the button of the menu for wide screen*/
+.close-btn{
+    display: none;
+}
+
+/*styling the second part which is categories*/
+.categories{
+    display: flex;
+    justify-content: space-between;
+    padding: 65px 65px 0 65px;
+    background: red;
+    height: 350px;
+}
+/*styling the test which describe this part*/
+.text-categories{
+    width: 40%;
+}
+.text-categories h2{
+    font-size: 30px;
+    margin-bottom: 17px;
+    text-transform: uppercase;
+}
+.text-categories p{
+    color: #fff;
+}
+.text-categories button{
+    margin-top: 17px;
+    background-color: rgba(0, 110, 255, 0.795);
+    border: 1px solid rgba(0, 110, 255, 0.795);
+    font-size: 15px;
+    padding: 14px  20px;
+    color: rgba(17, 219, 84, 0.92);
+}
+.text-categories button:hover{
+    background-color: rgb(166, 255,0);
+    border: 1px solid rgb(183, 255, 0);
+}
+
+/*styling parts of categories*/
+.devision-categories{
+    width: 55%;
+}
+/*make every 3 devisions in one line*/
+.devision-categories .part1{
+    display: flex;
+}
+
+.devision-categories .part2{
+    display: flex;
+}
+/*styling every box*/
+.devision-categories .part1 .square,.devision-categories .part2 .square{
+    border: 2px solid black;
+    border-radius: 10%;
+    margin: 7px;
+    padding: 10px;
+    transition: 0.5s;
+    background: linear-gradient(rgb(82, 236, 100),rgb(28, 28, 203));
+}
+
+.devision-categories .part1 .square:hover,.devision-categories .part2 .square:hover{
+    box-shadow:.5rem  0.7rem 1.6rem rgb(10, 6, 6);
+    /*bo-shadow: x-axis y-axis opacity   color*/
+}
+/*styling the content of every box*/
+.devision-categories .part1 .square h4,.devision-categories .part2 .square h4{
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.devision-categories .part1 .square p,.devision-categories .part2 .square p{
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.66);
+}
+
+/*styling the third part which is popular courses*/
+
+.popular-courses{
+    padding-top: 240px;
+    padding-bottom: 50px;
+    background: linear-gradient(#d30ab8b0,rgba(24, 180, 191, 0.801));
+}
+/*styling the title of this part*/
+.popular-courses h2{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+/*styling boxes*/
+.popular-courses .Courses{
+    display: flex;
+    padding: 20px 150px 0;
+}
+/*styling every box*/
+.popular-courses .Courses .course{
+    margin: 0 10px;
+    padding-bottom: 25px;
+    background: rgba(20, 22, 20, 0.751);
+    border: 1px solid black;
+    transition: 0.7s;
+}
+.popular-courses .Courses .course:hover{
+    background:rgba(0, 0,5, 0.795);
+}
+/*styling the image of every box*/
+.popular-courses .Courses .course img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+/*styling the content of every box*/
+.popular-courses .Courses .course .content{
+    flex-direction: column;
+    align-items: center;
+}
+.popular-courses .Courses .course .content h3{
+    margin-bottom: 10px;
+    color: rgb(224, 71, 71);
+}
+.popular-courses .Courses .course .content p{
+    color: rgb(235, 235, 236);
+}
+
+
+
+/*styling the part of faqs*/
+
+.faqs{
+    padding-bottom: 5rem;
+    background: rgba(72, 255, 0, 0.431);
+}
+/*styling the title of this part*/
+.faqs h2{
+    text-align: center;
+    padding-top: 6rem;
+    margin-top: 0rem;
+    margin-bottom: 5rem;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+/*styling the content of this part*/
+.container{
+    /*this is used to make the design as it is shoewd*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.faqs_container{
+    /*this is used to make the design as it is shoewd*/
+    padding: 2rem;
+    align-items: center;
+    gap: 1.4rem;
+    height: fit-content;
+    cursor: pointer;
+}
+/*styling evey faq */
+.faq{
+    /*this is used to make the design as it is shoewd*/
+    background: #f4f4f4;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.faq:hover{
+    border-color: #1e5afa;
+    color: #1e5afa;
+}
+/*styling the question*/
+.faq h4{
+    font-style: 1.2rem;
+    font-weight: 600;
+}
+/*styling the answer*/
+.faq p{
+    margin-top: 1rem;
+    display: none;
+}
+/*styling the icon of plus*/
+.faq i{
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+/*this is for show the paragraph*/
+.faq.open{
+    border-color: #1e5afa;
+    color: #1e5afa;
+    box-shadow: 0 2rem 2rem rgba(0,0,240,0.2);
+    z-index: 1;
+}
+.faq.open p{
+    display: block;
+}
+
+/*styling the part of the testimonial of student*/
+
+.student-testimonials{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(148, 88, 148);
+}
+/*styling the title of this part*/
+.student-testimonials h2{
+    text-align: center;
+    padding-top: 6rem;
+    margin-top: 0rem;
+    margin-bottom: 5rem;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+/*every student should be styled like this*/
+.student{
+    padding: 2rem;
+}
+/*styling the information of the student*/
+.student .informations{
+    text-align: center;
+    padding-bottom: 25px;
+}
+.student img{
+    border: 4px solid purple;
+    border-radius: 50%;
+    width: 8%;
+    margin-bottom: 2px;
+}
+
+.student  .opinion{
+    border: 2px solid purple;
+    padding: 15px;
+    background: purple;
+    color: white;
+    position: relative;
+}
+.student .opinion::before{
+    content: "";
+    display: block;
+    background: linear-gradient(135deg,transparent,purple,purple,purple,purple) ;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 48%;
+    top: -1.05rem;
+    transform: rotate(45deg);
+    z-index: -1;    
+}
+/*styling the footer*/
+.footers{
+    background: #1b2430ec;
+    color: white;
+}
+.footer{
+    display: flex;
+    padding: 45px 50px;
+}
+/*styling the first part */
+.description{
+    padding-right: 125px ;
+}
+/*styling the title of the first part */
+.footer .description h2{
+    font-size: 30px;
+    margin-bottom: 17px;
+    text-transform: uppercase;
+}
+.footer .description h2 a{
+    text-decoration: none;
+    color: #F05454;
+}
+
+/*styling the second part */
+.footer .permalinks{
+    padding-right: 125px;
+}
+/*styling the title of the second part */
+.footer .permalinks h3{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #39A388;
+}
+/*styling the content of this part*/
+.footer .permalinks ul li{
+    display: block;
+    margin: 15px;
+}
+.footer .permalinks ul li a{
+    text-decoration: none;
+    transition: 0.5s;
+    color: white;
+}
+.footer .permalinks ul li a:hover{
+    font-size: 15px;
+    text-decoration: underline;
+    color: #F05454;
+}
+
+/*styling the third part*/
+.footer .primacy{
+    padding-right: 80px;
+    width: 25%;
+    text-align: center;
+}
+/*styling the title of the third part */
+.footer .primacy h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #39A388;
+}
+
+/*styling the content of this part*/
+.footer .primacy ul li{
+    display: block;
+    margin: 15px;
+}
+.footer .primacy ul li a{
+    text-decoration: none;
+    transition: 0.5s;
+    color: white;
+}
+.footer .primacy ul li a:hover{
+    font-size: 15px;
+    text-decoration: underline;
+    color: #F05454;
+}
+
+/*styling the fourth part*/
+/*styling the title of this part*/
+.footer .Contact-us h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: #FF0075;
+}
+/*styling the content of this part*/
+.footer .Contact-us h5{
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+/*styling the logos of this part*/
+.footer .Contact-us .social-media{
+    margin-top: 10px;
+    text-align: center;
+}
+.footer .Contact-us .social-media a{
+    margin-right: 2px;
+}
+/*this is styling the part of copyright*/
+.footers hr{
+    background-color: black;
+    border: black 0.1px solid;
+}
+.footers h4{
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family:serif;
+}
+
+
+
+/*media for tablet*/
+
+@media screen and (max-width:1030px){
+    /*styling the test which describe this part*/
+
+.text-categories h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.text-categories button{
+    margin-top: 14px;
+}
+
+/*styling parts of categories*/
+.devision-categories{
+    width: 55%;
+}
+/*styling every box*/
+.devision-categories .part1 .square,.devision-categories .part2 .square{
+    border-radius: 10%;
+    margin: 4px;
+    height: 200px;
+}
+/*styling the content of every box*/
+.devision-categories .part1 .square h4,.devision-categories .part2 .square h4{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.devision-categories .part1 .square p,.devision-categories .part2 .square p{
+    font-size: 10.5px;
+    padding-bottom: 15px;
+}
+.faqs .container{
+    grid-template-columns: 1fr;
+}
+.faq{
+    padding: 1.5rem;
+}
+.popular-courses .Courses{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+}
+
+
+@media  screen and (max-width:930px){
+.devision-categories{
+    width: 70%;
+}
+.footer{
+    padding: 45px 10px;
+}
+/*styling the first part */
+.description{
+    padding-right: 25px ;
+}
+
+/*styling the second part */
+.footer .permalinks{
+    padding-right: 25px;
+}
+/*styling the content of this part*/
+.footer .permalinks ul li{
+    display: block;
+    margin: 5px;
+}
+
+/*styling the third part*/
+.footer .primacy{
+    padding-right: 30px;
+    width: 5%;
+}
+
+/*styling the content of this part*/
+.footer .primacy ul li{
+    display: block;
+    margin: 5px;
+}
+.popular-courses .Courses{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+}
+
+
+@media  screen and (max-width:865px){
+    .content{
+        padding-bottom: 50px;
+    }
+    .devision-categories{
+        width: 80.5%;
+    }
+/*styling the second part which is categories*/
+.categories{
+    padding: 65px 15px 0 ;
+    background: red;
+    height: 350px;
+}
+/*styling the test which describe this part*/
+.text-categories{
+    width: 40%;
+}
+.text-categories h2{
+    font-size: 30px;
+    margin-bottom: 17px;
+    text-transform: uppercase;
+}
+.text-categories p{
+    color: #fff;
+}
+.text-categories button{
+    margin-top: 17px;
+    background-color: rgba(0, 110, 255, 0.795);
+    border: 1px solid rgba(0, 110, 255, 0.795);
+    font-size: 15px;
+    padding: 14px  20px;
+    color: rgba(17, 219, 84, 0.92);
+}
+
+.popular-courses .Courses{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+}
+
+
+/*this is for the phone of surface Duo*/
+@media  screen and (max-width:640px){
+    .close-btn{
+        display: block;
+        margin-right: 38px;
+        cursor: pointer;
+    }
+    .close-btn .close{
+        display: none;
+    }
+    .nav-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .top-part ul{
+        position: fixed;
+        top: 2.5rem;
+        right: 8%;
+        height: fit-content;
+        width: 15rem;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+    .top-part ul li{
+        width: 100%;
+        height: 4.5rem;
+        /*this is for animations as it is showd*/
+        animation: animatNavItems 400ms  forwards;
+        transform-origin: top right;
+        opacity: 0;
+    }
+    .top-part ul li:nth-child(2){
+        animation-delay: 200ms;
+    }
+    .top-part ul li:nth-child(3){
+        animation-delay: 400ms;
+    }
+    .top-part ul li:nth-child(4){
+        animation-delay: 600ms;
+    }
+
+    @keyframes animatNavItems{
+        0%{
+            transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+        }
+        100%{
+            transform: rotateZ(0) rotateX(0) scale(1);
+            opacity: 1;
+        }
+    }
+    .top-part ul li a{
+        background: #3232d1;
+        box-shadow: -4rem 6rem 10rem rgba(0,0,0,0.6);
+        width: 100%;
+        height: 100%;
+        display: grid;  
+        place-items: center;      
+    }
+    .top-part ul li a:hover{
+        background: #1e5afa;
+    }
+    .content{
+        margin: 0 20px;
+    }
+    .content .image-content{
+        width: 57%;
+    }
+/*styling the second part which is categories*/
+.categories{
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+}
+/*styling the test which describe this part*/
+.text-categories{
+    width: 100%;
+    text-align: center;
+}
+/*styling parts of categories*/
+.devision-categories{
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+.popular-courses{
+    padding-top: 80px;
+}
+.popular-courses .Courses{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 70%;
+    padding: 20px 78px 0;
+}
+
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+}
+/*styling the third part*/
+.footer .primacy{
+    width: 94%;
+}
+.footer .description{
+    text-align: center;
+    padding-right: 0;
+}
+
+}
+
+/*media for phones*/
+
+@media  screen and (max-width:450px){
+    .close-btn{
+        margin-right: 65px;
+    }
+    .top-part ul{
+        right: 15%;
+    }
+header .image-content {
+    display: none;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 45px;
+}
+header .content{
+    padding-top: 130px;
+}
+/*styling the text of the content*/
+.content .text-content{
+    width: 100%;
+    text-align: center;
+}
+/*styling the second part which is categories*/
+.categories{
+    height: 970px;
+}
+
+.devision-categories{
+    align-items: center;
+    display: flex;
+    width:90%;
+    padding-left: 20px;
+}
+.devision-categories .part1,.devision-categories .part2{
+    display: flex;
+    flex-direction: column;
+}
+.popular-courses{
+    padding-top: 100px;
+}
+.popular-courses .Courses{
+    width: 80%;
+    padding: 20px 42px 0;
+}
+.popular-courses .Courses .course{
+    padding-bottom: 5px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+}
+/*styling the third part*/
+.footer .primacy{
+    width: 92%;
+}
+.footer .description{
+    text-align: center;
+    padding-right: 0;
+}
+}
+
+@media  screen and (max-width:330px){
+    .close-btn{
+        margin-right: 80px;
+    }
+    .top-part ul{
+        right: 20%;
+    }
+}

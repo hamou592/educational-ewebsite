@@ -1,0 +1,408 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*the background of the header*/
+header{
+    background: linear-gradient(#EE81B3,#87805E);
+    overflow: hidden;
+}
+/*styling the top part*/
+nav{
+    background: transparent;
+    width: 100%;
+    position: fixed;
+    padding: 15px;
+    z-index: +1;
+}
+/*we add this class in order to make make the nav position :fixed*/
+.nav-container{
+    display: flex;
+    justify-content: space-around;
+}
+/*styling the logo*/
+.top-part h2{
+    font-size: 30px;
+}
+.top-part h2 a{
+    text-decoration: none;
+    color: #0b6338;
+}
+/*styling the navbar*/
+.top-part ul{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    /*to remove points of a list*/
+    list-style: none;
+}
+.top-part ul li a{
+    text-decoration: none;
+    transition: all  400ms ease-out;
+    color: white;
+}
+.top-part ul li a:hover{
+    text-decoration: underline;
+    color: black;
+}
+/*this is the class for the background of the navbar
+when we do scrolling*/
+.window-scroll{
+    background: #d63114;
+    box-shadow: 0 0.2rem 1rem rgb(0, 0, 0);
+}
+/*we hide the button of the menu for wide screen*/
+.close-btn{
+    display: none;
+}
+
+
+.contact-container{
+    background: #161853;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 26.5rem;
+    margin-top: 320px;
+    margin-bottom: 250px;
+    z-index: -1;
+}
+.contact_aside{
+    background: blue;
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 12.2rem;
+}
+
+.aside_image {
+    width: 16rem;
+    margin-bottom: 1rem;
+}
+
+.aside_image  img{
+    width: 100%;
+}
+
+.contact_aside h2{
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+.contact_aside p{
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.contact_detail li{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.contact_detail li span{
+    font-size: 25px;
+}
+
+.contact_socials{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    align-items: center;
+    list-style: none;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right:5rem;
+}
+.form_name input:nth-child(1){
+    margin-bottom: 1rem;
+}
+
+
+
+input,textarea{
+    width: 96.2%;
+    padding: 1rem;
+    background: #6A5495;
+    color: white;
+}
+input::placeholder,textarea::placeholder{
+    color: black;
+}
+form button{
+    cursor: pointer;
+    width: fit-content;
+    margin-top: 1rem;
+    margin-top: 17px;
+    background-color: #FFA6D5;
+    border: 1px solid #FFA6D5;
+    padding: 14px  20px;
+    text-decoration: none;
+    font-weight: 800;
+}
+form button:hover{
+    background-color: #ffa6d564;
+    border: 1px solid #FFA6D5;
+}
+
+/*styling the footer*/
+.footers{
+    background: #1b2430ec;
+    color: white;
+}
+.footer{
+    display: flex;
+    padding: 45px 50px;
+}
+/*styling the first part */
+.description{
+    padding-right: 125px ;
+}
+/*styling the title of the first part */
+.footer .description h2{
+    font-size: 30px;
+    margin-bottom: 17px;
+    text-transform: uppercase;
+}
+.footer .description h2 a{
+    text-decoration: none;
+    color: #F05454;
+}
+
+/*styling the second part */
+.footer .permalinks{
+    padding-right: 125px;
+}
+/*styling the title of the second part */
+.footer .permalinks h3{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #39A388;
+}
+/*styling the content of this part*/
+.footer .permalinks ul li{
+    display: block;
+    margin: 15px;
+}
+.footer .permalinks ul li a{
+    text-decoration: none;
+    transition: 0.5s;
+    color: white;
+}
+.footer .permalinks ul li a:hover{
+    font-size: 15px;
+    text-decoration: underline;
+    color: #F05454;
+}
+
+/*styling the third part*/
+.footer .primacy{
+    padding-right: 80px;
+    width: 25%;
+    text-align: center;
+}
+/*styling the title of the third part */
+.footer .primacy h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #39A388;
+}
+
+/*styling the content of this part*/
+.footer .primacy ul li{
+    display: block;
+    margin: 15px;
+}
+.footer .primacy ul li a{
+    text-decoration: none;
+    transition: 0.5s;
+    color: white;
+}
+.footer .primacy ul li a:hover{
+    font-size: 15px;
+    text-decoration: underline;
+    color: #F05454;
+}
+
+/*styling the fourth part*/
+/*styling the title of this part*/
+.footer .Contact-us h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: #FF0075;
+}
+/*styling the content of this part*/
+.footer .Contact-us h5{
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+/*styling the logos of this part*/
+.footer .Contact-us .social-media{
+    margin-top: 10px;
+    text-align: center;
+}
+.footer .Contact-us .social-media a{
+    margin-right: 2px;
+}
+/*this is styling the part of copyright*/
+.footers hr{
+    background-color: black;
+    border: black 0.1px solid;
+}
+.footers h4{
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family:serif;
+}
+
+
+@media screen and (max-width:940px){
+        .footer{
+            display: flex;
+            padding: 45px 30px;
+        }
+    /*styling the first part */
+    .description{
+        padding-right: 35px ;
+        width: 100%;
+    }
+    
+    /*styling the second part */
+    .footer .permalinks{
+        padding-right: 35px;
+    }
+    
+    /*styling the third part*/
+    .footer .primacy{
+        padding-right: 20px;
+    }  
+    
+    }
+
+@media  screen and (max-width:750px){
+    .contact-container{
+        margin-top: 380px;
+        height: 1000px;
+        grid-template-columns: 1fr;
+        gap: 0rem;
+        padding: 10px;
+    }
+    form{
+        transform: translateY(-150px);
+        margin: 0 1.5rem 3rem;
+    }
+    .form_name input[type="text"]{
+        width: 95.8%;
+    }
+}
+@media  screen and (max-width:675px){
+        .close-btn{
+            display: block;
+            margin-right: 38px;
+            cursor: pointer;
+        }
+        .close-btn .close{
+            display: none;
+        }
+        .nav-container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .top-part ul{
+            position: fixed;
+            top: 2.5rem;
+            right: 8%;
+            height: fit-content;
+            width: 15rem;
+            flex-direction: column;
+            gap: 0;
+            display: none;
+        }
+        .top-part ul li{
+            width: 100%;
+            height: 4.5rem;
+            /*this is for animations as it is showd*/
+            animation: animatNavItems 400ms  forwards;
+            transform-origin: top right;
+            opacity: 0;
+        }
+        .top-part ul li:nth-child(2){
+            animation-delay: 200ms;
+        }
+        .top-part ul li:nth-child(3){
+            animation-delay: 400ms;
+        }
+        .top-part ul li:nth-child(4){
+            animation-delay: 600ms;
+        }
+    
+        @keyframes animatNavItems{
+            0%{
+                transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+            }
+            100%{
+                transform: rotateZ(0) rotateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+        .top-part ul li a{
+            background: #3232d1;
+            box-shadow: -4rem 6rem 10rem rgba(0,0,0,0.6);
+            width: 100%;
+            height: 100%;
+            display: grid;  
+            place-items: center;      
+        }
+        .top-part ul li a:hover{
+            background: #1e5afa;
+        }
+        .footer{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    .footer .permalinks{
+        padding-right:10px;
+    }
+    /*styling the third part*/
+    .footer .primacy{
+        width: 94%;
+    }
+    .footer .description{
+        text-align: center;
+    }
+    
+}
+
+@media  screen and (max-width:550px){
+    .contact-container{
+        height: 1040px;
+    }
+    
+}
+
+@media  screen and (max-width:550px){
+    form{
+        margin-right: 7%;
+    }
+}
+
+@media  screen and (max-width:450px){
+    form{
+        margin-right: 12%;
+    }
+}
